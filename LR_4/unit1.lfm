@@ -1,0 +1,378 @@
+object Form1: TForm1
+  Left = 253
+  Height = 411
+  Top = 353
+  Width = 382
+  BorderStyle = bsToolWindow
+  Caption = 'Калькулятор'
+  ClientHeight = 411
+  ClientWidth = 382
+  Color = 16382208
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Edit1: TEdit
+    Left = 8
+    Height = 39
+    Top = 8
+    Width = 368
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnBackspace: TButton
+    Left = 8
+    Height = 58
+    Top = 56
+    Width = 128
+    Caption = '< -'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnBackspaceClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnCe: TButton
+    Left = 152
+    Height = 58
+    Top = 56
+    Width = 56
+    Caption = 'ce'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnCeClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btnClear: TButton
+    Left = 232
+    Height = 58
+    Top = 56
+    Width = 56
+    Caption = 'c'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnClearClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btnSqrt: TButton
+    Left = 312
+    Height = 58
+    Top = 56
+    Width = 56
+    Caption = 'Kop'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnSqrtClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object btn7: TButton
+    Left = 8
+    Height = 58
+    Top = 128
+    Width = 56
+    Caption = '7'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn7Click
+    ParentFont = False
+    TabOrder = 5
+  end
+  object btn8: TButton
+    Left = 80
+    Height = 58
+    Top = 128
+    Width = 56
+    Caption = '8'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn8Click
+    ParentFont = False
+    TabOrder = 6
+  end
+  object btn9: TButton
+    Left = 152
+    Height = 58
+    Top = 128
+    Width = 56
+    Caption = '9'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn9Click
+    ParentFont = False
+    TabOrder = 7
+  end
+  object btnDiv: TButton
+    Left = 232
+    Height = 58
+    Top = 128
+    Width = 56
+    Caption = '/'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnDivClick
+    ParentFont = False
+    TabOrder = 8
+  end
+  object btnSquare: TButton
+    Left = 312
+    Height = 58
+    Top = 128
+    Width = 56
+    Caption = 'x^2'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnSquareClick
+    ParentFont = False
+    TabOrder = 9
+  end
+  object btn4: TButton
+    Left = 8
+    Height = 58
+    Top = 200
+    Width = 56
+    Caption = '4'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn4Click
+    ParentFont = False
+    TabOrder = 10
+  end
+  object btn5: TButton
+    Left = 80
+    Height = 58
+    Top = 200
+    Width = 56
+    Caption = '5'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn5Click
+    ParentFont = False
+    TabOrder = 11
+  end
+  object btn6: TButton
+    Left = 152
+    Height = 58
+    Top = 200
+    Width = 56
+    Caption = '6'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn6Click
+    ParentFont = False
+    TabOrder = 12
+  end
+  object btnMul: TButton
+    Left = 232
+    Height = 58
+    Top = 200
+    Width = 56
+    Caption = '*'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnMulClick
+    ParentFont = False
+    TabOrder = 13
+  end
+  object btnInv: TButton
+    Left = 312
+    Height = 58
+    Top = 200
+    Width = 56
+    Caption = '1/x'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnInvClick
+    ParentFont = False
+    TabOrder = 14
+  end
+  object btn1: TButton
+    Left = 8
+    Height = 58
+    Top = 272
+    Width = 56
+    Caption = '1'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn1Click
+    ParentFont = False
+    TabOrder = 15
+  end
+  object btn2: TButton
+    Left = 80
+    Height = 58
+    Top = 272
+    Width = 56
+    Caption = '2'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn2Click
+    ParentFont = False
+    TabOrder = 16
+  end
+  object btn3: TButton
+    Left = 152
+    Height = 58
+    Top = 272
+    Width = 56
+    Caption = '3'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn3Click
+    ParentFont = False
+    TabOrder = 17
+  end
+  object btnSub: TButton
+    Left = 232
+    Height = 58
+    Top = 272
+    Width = 56
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnSubClick
+    ParentFont = False
+    TabOrder = 18
+  end
+  object btnEqual: TButton
+    Left = 312
+    Height = 130
+    Top = 272
+    Width = 56
+    Caption = '='
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnEqualClick
+    ParentFont = False
+    TabOrder = 22
+  end
+  object btnPoint: TButton
+    Left = 152
+    Height = 58
+    Top = 344
+    Width = 56
+    Caption = ','
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnPointClick
+    ParentFont = False
+    TabOrder = 20
+  end
+  object btnAdd: TButton
+    Left = 232
+    Height = 58
+    Top = 344
+    Width = 56
+    Caption = '+'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnAddClick
+    ParentFont = False
+    TabOrder = 21
+  end
+  object btn0: TButton
+    Left = 8
+    Height = 58
+    Top = 344
+    Width = 128
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = '@Malgun Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btn0Click
+    ParentFont = False
+    TabOrder = 19
+  end
+end

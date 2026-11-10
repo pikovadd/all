@@ -1,0 +1,288 @@
+object MainForm: TMainForm
+  Left = 357
+  Height = 550
+  Top = 181
+  Width = 717
+  Caption = 'библиотека - учет книг'
+  ClientHeight = 525
+  ClientWidth = 717
+  Constraints.MaxHeight = 600
+  Constraints.MaxWidth = 850
+  Constraints.MinHeight = 550
+  Constraints.MinWidth = 717
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object StringGrid1: TStringGrid
+    Left = 0
+    Height = 333
+    Top = 192
+    Width = 717
+    Align = alClient
+    Anchors = [akTop, akLeft, akRight]
+    AutoFillColumns = True
+    Color = clWhite
+    ColCount = 6
+    Columns = <    
+      item
+        Title.Caption = 'инв. номер'
+        Width = 115
+      end    
+      item
+        Title.Caption = 'автор'
+        Width = 115
+      end    
+      item
+        Title.Caption = 'название'
+        Width = 115
+      end    
+      item
+        Alignment = taCenter
+        Title.Caption = 'год'
+        Width = 115
+      end    
+      item
+        Alignment = taCenter
+        Title.Caption = 'страниц'
+        Width = 115
+      end    
+      item
+        Title.Caption = 'в наличии'
+        Width = 117
+      end>
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goSmoothScroll]
+    RowCount = 2
+    ScrollBars = ssBoth
+    TabOrder = 0
+    OnClick = ButtonAddClick
+    ColWidths = (
+      115
+      115
+      115
+      115
+      115
+      117
+    )
+  end
+  object Panel1: TPanel
+    Left = 6
+    Height = 180
+    Top = 6
+    Width = 705
+    Align = alTop
+    BorderSpacing.Around = 6
+    ClientHeight = 180
+    ClientWidth = 705
+    Color = 12953562
+    Constraints.MinWidth = 700
+    ParentBidiMode = False
+    ParentColor = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 10
+      Height = 20
+      Top = 12
+      Width = 103
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Caption = 'инв. номер'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 10
+      Height = 20
+      Top = 47
+      Width = 84
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Caption = 'название'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 230
+      Height = 20
+      Top = 12
+      Width = 51
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Caption = 'автор'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 10
+      Height = 20
+      Top = 82
+      Width = 39
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Caption = 'год'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 160
+      Height = 20
+      Top = 80
+      Width = 81
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Caption = 'страниц'
+      ParentColor = False
+    end
+  end
+  object EditInv: TEdit
+    Left = 104
+    Height = 28
+    Top = 10
+    Width = 120
+    Constraints.MaxHeight = 38
+    Constraints.MaxWidth = 150
+    Constraints.MinHeight = 28
+    Constraints.MinWidth = 120
+    TabOrder = 2
+  end
+  object EditAuthor: TEdit
+    Left = 280
+    Height = 28
+    Top = 10
+    Width = 167
+    TabOrder = 3
+  end
+  object EditTitle: TEdit
+    Left = 88
+    Height = 28
+    Top = 45
+    Width = 341
+    TabOrder = 4
+  end
+  object EditYear: TEdit
+    Left = 50
+    Height = 28
+    Top = 80
+    Width = 103
+    TabOrder = 5
+  end
+  object EditPages: TEdit
+    Left = 240
+    Height = 28
+    Top = 80
+    Width = 97
+    TabOrder = 6
+  end
+  object CheckInStock: TCheckBox
+    Left = 352
+    Height = 24
+    Top = 80
+    Width = 96
+    Caption = 'в наличии'
+    TabOrder = 7
+  end
+  object ButtonAdd: TButton
+    Left = 8
+    Height = 41
+    Top = 120
+    Width = 92
+    Caption = 'добавить'
+    Color = clRed
+    OnClick = ButtonAddClick
+    TabOrder = 8
+  end
+  object ButtonEdit: TButton
+    Left = 104
+    Height = 41
+    Top = 120
+    Width = 124
+    Caption = 'редактировать'
+    TabOrder = 9
+  end
+  object ButtonDelete: TButton
+    Left = 232
+    Height = 41
+    Top = 120
+    Width = 92
+    Caption = 'удалить'
+    TabOrder = 10
+  end
+  object ButtonSortAsc: TButton
+    Left = 328
+    Height = 41
+    Top = 120
+    Width = 92
+    Caption = 'сорт ↑'
+    TabOrder = 11
+  end
+  object ButtonSortDesc: TButton
+    Left = 424
+    Height = 41
+    Top = 120
+    Width = 92
+    Caption = 'сорт ↓'
+    TabOrder = 12
+  end
+  object ButtonSearch: TButton
+    Left = 520
+    Height = 41
+    Top = 120
+    Width = 92
+    Caption = 'поиск'
+    TabOrder = 13
+  end
+  object ButtonClear: TButton
+    Left = 616
+    Height = 41
+    Top = 120
+    Width = 92
+    Caption = 'очистить'
+    TabOrder = 14
+  end
+  object MainMenu1: TMainMenu
+    left = 80
+    top = 344
+    object MenuItem1: TMenuItem
+      Caption = 'файлл'
+      object MenuItem2: TMenuItem
+        Caption = 'создать'
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'открыть'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'сохранить'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'сохранить как'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'закрыть'
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'выход'
+      end
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'запись'
+      object MenuItem9: TMenuItem
+        Caption = 'добавить'
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'редактировать'
+      end
+      object MenuItem11: TMenuItem
+        Caption = 'удалить'
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'сортировка'
+        object MenuItem13: TMenuItem
+          Caption = 'по возрастанию'
+        end
+        object MenuItem14: TMenuItem
+          Caption = 'по убыванию'
+        end
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'поиск'
+      end
+      object MenuItem16: TMenuItem
+        Caption = 'очистить'
+      end
+    end
+  end
+end

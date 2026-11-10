@@ -1,0 +1,60 @@
+object Form1: TForm1
+  Left = 258
+  Height = 308
+  Top = 166
+  Width = 385
+  Caption = 'lfuofjkds'
+  ClientHeight = 308
+  ClientWidth = 385
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 64
+    Height = 20
+    Top = 40
+    Width = 96
+    Caption = 'первое число'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 232
+    Height = 20
+    Top = 40
+    Width = 94
+    Caption = 'второе число'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 144
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'обменять'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 56
+    Height = 28
+    Top = 87
+    Width = 112
+    TabOrder = 1
+  end
+  object Edit2: TEdit
+    Left = 224
+    Height = 28
+    Top = 87
+    Width = 112
+    TabOrder = 2
+  end
+  object BitBtn1: TBitBtn
+    Left = 256
+    Height = 30
+    Top = 272
+    Width = 75
+    Caption = 'выход'
+    Kind = bkAbort
+    ModalResult = 3
+    OnClick = BitBtn1Click
+    TabOrder = 3
+  end
+end
